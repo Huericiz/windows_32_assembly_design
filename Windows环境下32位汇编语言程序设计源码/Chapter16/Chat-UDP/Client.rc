@@ -1,0 +1,24 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include	<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN	1000
+#define	DLG_MAIN	2000
+#define IDC_SERVER	2001
+#define IDC_INFO	2002
+#define IDC_TEXT	2003
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	icon	"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 94, 83, 245, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "UDP聊天－客户端"
+FONT 9, "宋体"
+{
+ LTEXT "服务器IP地址：", -1, 6, 6, 57, 8
+ EDITTEXT IDC_SERVER, 63, 4, 77, 12
+ EDITTEXT IDC_INFO, 4, 20, 237, 110, ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+ LTEXT "输入", -1, 6, 138, 19, 8
+ EDITTEXT IDC_TEXT, 28, 136, 150, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+ DEFPUSHBUTTON "发送(&S)", IDOK, 185, 135, 56, 14
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

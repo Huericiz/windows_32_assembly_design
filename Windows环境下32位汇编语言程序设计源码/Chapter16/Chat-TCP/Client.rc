@@ -1,0 +1,26 @@
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#include	<resource.h>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#define	ICO_MAIN	1000
+#define	DLG_MAIN	2000
+#define IDC_SERVER	2001
+#define IDC_CONNECT	2002
+#define IDC_INFO	2003
+#define IDC_TEXT	2004
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ICO_MAIN	icon	"Main.ico"
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+DLG_MAIN DIALOG 94, 81, 245, 155
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "TCP聊天－客户端"
+FONT 9, "宋体"
+{
+ LTEXT "服务器IP地址：", -1, 6, 7, 57, 8
+ EDITTEXT IDC_SERVER, 63, 5, 116, 12
+ PUSHBUTTON "连接(&C)", IDC_CONNECT, 186, 4, 56, 14
+ EDITTEXT IDC_INFO, 4, 22, 237, 110, ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+ LTEXT "输入", -1, 6, 140, 19, 8
+ EDITTEXT IDC_TEXT, 28, 138, 150, 12, ES_AUTOHSCROLL | WS_DISABLED | WS_BORDER | WS_TABSTOP
+ DEFPUSHBUTTON "发送(&S)", IDOK, 185, 137, 56, 14, BS_DEFPUSHBUTTON | WS_DISABLED | WS_TABSTOP
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
